@@ -2,7 +2,7 @@
 'use strict';
 
     angular
-        .module('app')
+        .module('app.controllers')
         .controller('AddController', AddController);
 
     AddController.$inject = ['DataService'];
