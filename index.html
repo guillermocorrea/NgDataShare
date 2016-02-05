@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>App</title>
+</head>
+
+<body>
+    <div ng-controller="AddController as vm">
+        <form>
+            <input type="text" data-ng-model="vm.item.title">
+            <button data-ng-click="vm.add(vm.item)">Submit</button>
+        </form>
+    </div>
+    <div ng-controller="ListController as vm">
+        <ul>
+            <li data-ng-repeat="item in vm.items">
+                {{item.title}}
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/services/data.service.js"></script>
+    <script src="app/controllers/add.controller.js"></script>
+    <script src="app/controllers/list.controller.js"></script>
+</body>
+
+</html>
